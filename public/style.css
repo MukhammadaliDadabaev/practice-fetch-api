@@ -1,0 +1,297 @@
+/* global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: cadetblue;
+}
+img {
+  cursor: pointer;
+}
+/* header, nav styles  */
+.navbar {
+  height: 10vh;
+  background-color: #181229;
+}
+.navbar .nav__images {
+  width: 90%;
+  padding: 0.7rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.navbar .logo img {
+  width: 170px;
+}
+.navbar h1 {
+  color: #fff;
+  font-size: 4.7rem;
+}
+/* main__head styles */
+main {
+  height: 60vh;
+  background-image: url("https://peerbits-wpengine.netdna-ssl.com/wp-content/uploads/2020/03/improve-software-development-team-main.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main__head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main__info {
+  margin: 10%;
+  text-align: center;
+}
+.main__title h1 {
+  font-size: 6rem;
+  font-weight: 800;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+.main__info,
+h2,
+h3 {
+  font-size: 3.7rem;
+  color: #fff;
+}
+.main__head,
+.btn-group {
+  margin-bottom: 2rem;
+}
+.btn-group button {
+  padding: 1.3rem 3.5rem;
+  margin-left: 1rem;
+  font-size: 2.5rem;
+  letter-spacing: 5px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+.btn-group .btn-dark {
+  background-color: rgba(0, 83, 28, 0.911);
+}
+.btn-group .btn-info {
+  background-color: rgba(94, 6, 14, 0.911);
+}
+/* wrapper, card__photos styles */
+
+.card__photos {
+  margin: 3rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.cards {
+  width: 270px;
+  height: 370px;
+  margin: 15px;
+  background-color: #ccc;
+  border-radius: 7px;
+  overflow: hidden;
+  transition: 0.3s all linear;
+}
+.cards:hover {
+  box-shadow: 0 0 5px 7px rgba(0, 0, 0, 0.5), 10px 15px rgba(255, 255, 255, 0.5);
+}
+.card__img {
+  overflow: hidden;
+}
+.card__img img {
+  width: 270px;
+  transition: 0.3s all linear;
+}
+.card__img:hover img {
+  transform: scale(1.1);
+}
+.card__info h2 {
+  text-align: center;
+  font-size: 3.3rem;
+  color: #181229;
+}
+.card__info h4 {
+  margin: 2.3rem 0.7rem;
+  font-size: 1.7rem;
+}
+/* footer styles */
+footer {
+  background-image: url("https://images.unsplash.com/photo-1484788984921-03950022c9ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDMwfHx3ZWJzaXRlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.footer {
+  height: 65vh;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+/* animated icon */
+.arrow {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  top: -20px;
+}
+.chevron {
+  position: absolute;
+  width: 28px;
+  height: 8px;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease-out infinite;
+}
+.chevron:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+.chevron:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+.chevron:before,
+.chevron:after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: rgb(49, 0, 82);
+}
+.chevron:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+@keyframes move {
+  25% {
+    opacity: 1;
+
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
+}
+/* animated icon ended */
+
+/* footer, form styles */
+.footer,
+.btns {
+  margin-left: 10rem;
+  border: none;
+  background: none;
+}
+.card {
+  margin: 1rem auto;
+  height: 43vh;
+  background-color: rgba(47, 56, 185, 0.3);
+}
+.form-group {
+  margin-top: 2rem;
+}
+.form-group label {
+  font-size: 2.5rem;
+  color: #fff;
+}
+.form-group input {
+  font-size: 2rem;
+}
+form .btn-primary {
+  margin-top: 1rem;
+  padding: 0.3rem 1rem;
+  font-size: 2rem;
+}
+form .btn-danger {
+  margin-top: 1rem;
+  padding: 0.3rem 1rem;
+  font-size: 2rem;
+  float: right;
+}
+/* footer styles */
+.footer__info {
+  height: 13vh;
+  background-color: #181229;
+  display: flex;
+  justify-content: center;
+  
+}
+.footer__info ul {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.footer__info ul li {
+  list-style: none;
+  font-size: 2.3rem;
+}
+.footer__info ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+.footer__info ul li:nth-child(1) a:hover {
+  text-decoration: underline;
+  color: rgb(18, 209, 18);
+}
+/* Responsive styles */
+@media only screen and (max-width: 700px) {
+  main {
+    height: 95vh;
+  }
+  .main__info {
+    margin: 3%;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  html {
+    font-size: 50%;
+  }
+  .navbar {
+    height: 15vh;
+  }
+  .navbar .nav__images img {
+    display: none;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 300px) {
+  html {
+    font-size: 30%;
+  }
+  .footer {
+    height: 100vh;
+  }
+  .card {
+    display: none;
+  }
+}
+
